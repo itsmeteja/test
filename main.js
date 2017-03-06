@@ -11,7 +11,7 @@ mainApp.config(function($routeProvider) {
 			controller: 'StudentController'
 		})
 		.otherwise({
-			redirectTo: '/viewStudents'
+			redirectTo: '/home'
 		});
 });
 
