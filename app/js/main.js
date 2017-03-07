@@ -1,15 +1,22 @@
-var mainApp = angular.module("mainApp", ['ngRoute']);
 
-mainApp.config(function($routeProvider) {
+var mainApp = angular.module("mainApp", ['ngRoute'])
+
+mainApp.config(function ($routeProvider) {
+
 	$routeProvider
 		.when('/home', {
-			templateUrl: 'home.html',
+			templateUrl: '/app/partials/home.html',
 			controller: 'StudentController'
 		})
 		.when('/viewStudents', {
-			templateUrl: 'viewStudents.html',
+		    templateUrl: '/app/partials/viewStudents.html',
 			controller: 'StudentController'
 		})
+        .when('/courses', {
+            templateUrl: '/app/partials/courses.html',
+            controller: 'StudentController'
+        })
+
 		.otherwise({
 			redirectTo: '/home'
 		});
